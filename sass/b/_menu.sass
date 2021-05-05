@@ -3,16 +3,17 @@
   height: 50px
   width: 100%
   background-color: $black-green
-  .container
-    display: flex
   ul
     list-style: none
+  .menu_wrapper
+    display: flex
 
 
 .menu_catalog
   position: relative
   display: flex
   align-items: center
+  cursor: pointer
   background-color: $white-green
   .menu_catalog_text
     margin-left: 25px
@@ -29,12 +30,11 @@
 .menu_address
   display: flex
   align-items: center
-  margin-left: 24px
   &__address
-    font-size: 14px
+    font-size: 15px
     letter-spacing: -0.015em
     color: $white
-    +monsL
+    +monsR
   &__icon
     margin-left: 5px
 
@@ -62,11 +62,10 @@
   transform: scaleY(0)
   transform-origin: 0 0
   transition: .5s ease-in-out
-  cursor: pointer
   display: flex
   flex-direction: column
   align-items: start
-  &__text
+  .submenu_text
     margin-left: 12px
     color: $black
     font-size: 15px
@@ -75,22 +74,18 @@
     display: flex
     justify-content: start
     align-items: center
-
     padding: 8px 25px
-
-  &__icon
-    background-color: #4C5C24
-
 
   a
     text-decoration: none
-  a:hover
+
+  li:hover
     .submenu_link_wrapper
       background-color: #FAFAFA
-    &__icon
-    color: $button-green
-    &__text
-      color: $button-green
+      .submenu_icon
+        stroke: $button-green
+      .submenu_text
+        color: $button-green
 
 
 
@@ -102,12 +97,14 @@
 
 .menu_phone
   display: flex
+  //width: 25%
   align-items: center
-  margin-left: 96px
+  justify-content: end
+  //margin-left: 96px
   &__text
-    font-size: 14px
+    font-size: 15px
     color: $white
-    +monsL
+    +monsR
   &__number
     text-decoration: none
     font-size: 15px
