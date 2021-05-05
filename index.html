@@ -6,18 +6,59 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Грядка</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <container>
+<header class="header">
+    <div class="container">
+        <a href="/" class="header__logo"><img src="img/header/logo.png" alt=""></a>
+        <form class="search">
+            <input type="text" placeholder="Введите запрос...">
+            <div class="search__button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                          stroke="#DDDDDD" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.0004 20.9999L16.6504 16.6499" stroke="#DDDDDD" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+                <button type="submit">Поиск</button>
+            </div>
+        </form>
+        <div class="personal">
+            <div class="sign-up-in">
+                <a href="#" class="login">Вход</a>
+                <div class="login">/</div>
+                <a href="#" class="login">Регистрация</a>
+            </div>
+            <div class="icons">
+                <a href="#" class="icons__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.4996 10.9953C9.13203 10.9953 7.20605 9.06934 7.20605 6.70176C7.20605 4.33418 9.13203 2.4082 11.4996 2.4082C13.8672 2.4082 15.7932 4.33418 15.7932 6.70176C15.7932 9.06934 13.8672 10.9953 11.4996 10.9953ZM11.4996 3.92227C9.96699 3.92227 8.72012 5.16914 8.72012 6.70176C8.72012 8.23437 9.96699 9.48125 11.4996 9.48125C13.0322 9.48125 14.2791 8.23437 14.2791 6.70176C14.2791 5.16914 13.0322 3.92227 11.4996 3.92227V3.92227Z" fill="#242424"/>
+                    <path d="M19.8348 20.5917H3.16523C2.7459 20.5917 2.4082 20.2541 2.4082 19.8347C2.4082 17.3595 3.37305 15.0402 5.1209 13.3035C6.24902 12.1828 7.84102 11.5408 9.48496 11.5408H13.515C15.1627 11.5408 16.751 12.1828 17.8791 13.3035C19.627 15.0402 20.5918 17.3595 20.5918 19.8347C20.5918 20.2541 20.2541 20.5917 19.8348 20.5917ZM3.95937 19.0777H19.0406C18.8699 17.2964 18.0906 15.6488 16.8104 14.3796C15.9643 13.541 14.7619 13.0585 13.515 13.0585H9.48496C8.23437 13.0585 7.03574 13.541 6.18965 14.3796C4.90938 15.6488 4.13008 17.2964 3.95937 19.0777V19.0777Z" fill="#242424"/>
+                </svg>
+                </a>
+                <a href="#" class="icons__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3192 5.86204C16.2204 4.76327 14.7503 4.1582 13.1792 4.1582C11.8267 4.1582 10.5491 4.60678 9.51867 5.43261C8.47344 4.60678 7.19425 4.1582 5.85489 4.1582C4.27656 4.1582 2.80257 4.76353 1.70384 5.86204C0.605068 6.96059 0 8.43094 0 10.0017C0 11.5728 0.605068 13.0429 1.70384 14.1414L9.0168 21.4544C9.15006 21.5879 9.32503 21.6546 9.5 21.6546C9.67453 21.6546 9.84901 21.5881 9.98253 21.4553L17.3014 14.1587C18.397 13.0386 19 11.5664 19 10.0131C19 8.44552 18.405 6.97336 17.3192 5.86204ZM16.3302 13.1966L9.50067 20.0052L2.67024 13.175C1.82983 12.3344 1.36689 11.2074 1.36689 10.0017C1.36689 8.79613 1.82983 7.66912 2.67024 6.82848C3.51088 5.98807 4.64179 5.52513 5.85489 5.52513C7.04867 5.52513 8.18184 5.99011 9.04504 6.83394C9.31249 7.09571 9.74147 7.09341 10.006 6.82848C10.8466 5.98807 11.9734 5.52513 13.1792 5.52513C14.3851 5.52513 15.5119 5.98807 16.3468 6.82299C17.1763 7.67161 17.6331 8.80456 17.6331 10.0131C17.6331 11.2071 17.1684 12.34 16.3302 13.1966Z" fill="#242424"/>
+                </svg>
+                    <div class="count">0</div></a>
+                <a href="#" class="icons__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.9901 21.1647L16.7402 7.61138C16.7061 7.24125 16.3875 6.95774 16.006 6.95774H13.4285V5.82582C13.4285 3.71626 11.6661 2 9.4997 2C7.33344 2 5.57118 3.71626 5.57118 5.82582V6.95774H2.99198C2.61039 6.95774 2.29181 7.24125 2.2577 7.61138L1.00295 21.218C0.984468 21.4188 1.05347 21.6178 1.19315 21.7666C1.33283 21.9153 1.53031 22 1.73722 22H17.2608H17.2628C17.67 22 18 21.6786 18 21.2821C17.9999 21.2422 17.9966 21.2029 17.9901 21.1647ZM7.04563 5.82582C7.04563 4.50792 8.14655 3.43572 9.4998 3.43572C10.8531 3.43572 11.9542 4.50792 11.9542 5.82582V6.95774H7.04563V5.82582ZM2.54365 20.5644L3.666 8.39346H5.57118V9.67719C5.57118 10.0736 5.90116 10.3951 6.30841 10.3951C6.71565 10.3951 7.04563 10.0736 7.04563 9.67719V8.39346H11.9542V9.67719C11.9542 10.0736 12.2842 10.3951 12.6914 10.3951C13.0986 10.3951 13.4286 10.0736 13.4286 9.67719V8.39346H15.332L16.4544 20.5644H2.54365Z" fill="#242424"/>
+                </svg>
+                    <div class="count">777</div></a>
 
-        </container>
-    </header>
+            </div>
+
+        </div>
+    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+</header>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
