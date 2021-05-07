@@ -10,11 +10,14 @@
 
 
 .menu_catalog
-  position: relative
-  display: flex
-  align-items: center
-  cursor: pointer
-  background-color: $white-green
+  .menu_catalog_wrapper
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+    height: 50px
+    max-width: 330px
+    background-color: $white-green
   .menu_catalog_text
     margin-left: 25px
     font-size: 16px
@@ -30,6 +33,11 @@
 .menu_address
   display: flex
   align-items: center
+  .menu_address_wrapper
+    display: flex
+    align-items: center
+    margin-left: 24px
+
   &__address
     font-size: 15px
     letter-spacing: -0.015em
@@ -37,6 +45,7 @@
     +monsR
   &__icon
     margin-left: 5px
+    cursor: pointer
 
     margin-bottom: 3px
 
